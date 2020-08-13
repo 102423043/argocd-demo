@@ -1,0 +1,14 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: argocd-playground
+spec:
+  entryPoints:
+    - argocd-playground
+  routes:
+    - match: Host(`$(GLN_FQDN)`) && PathPrefix(`/argocd`)
+      kind: Rule
+      services:
+        - name: argocd-playground
+          port: 80
