@@ -4,9 +4,6 @@ kind: IngressRoute
 metadata:
   name: argocd-playground
 spec:
-  entryPoints:
-    - web
-    - websecure
   routes:
     - match: PathPrefix(`/internal/playground`)
       kind: Rule
