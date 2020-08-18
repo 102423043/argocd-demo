@@ -11,5 +11,5 @@ spec:
     - match: PathPrefix(`/internal/playground`)
       kind: Rule
       services:
-        - name: gln-search-service
+        - name: argocd-playground
           port: 80
